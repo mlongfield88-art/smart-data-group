@@ -27,7 +27,7 @@ import SectionHeader from '@/components/SectionHeader.astro';
   </section>
 
   <!-- ======== FULL-WIDTH IMAGE ======== -->
-  <section class="container">
+  <section class="about-banner">
     <div class="img-crop clip-reveal" style="aspect-ratio: 21/9;">
       <img
         src="/images/hero-parliament.jpeg"
@@ -222,6 +222,11 @@ import SectionHeader from '@/components/SectionHeader.astro';
   .page-hero__intro {
     max-width: 680px;
     margin-top: var(--space-8);
+  }
+
+  .about-banner {
+    width: 100%;
+    overflow: hidden;
   }
 
   /* --- About Split --- */

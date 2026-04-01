@@ -116,12 +116,25 @@ svg {
 /* Crop Gemini watermark from bottom-right of AI-generated images */
 .img-crop {
   overflow: hidden;
-  border-radius: var(--radius-md);
 }
 
 .img-crop img {
   transform: scale(1.06);
   transform-origin: top left;
+}
+
+/* Full-bleed images — break out of container */
+.img-full-bleed {
+  width: 100vw;
+  margin-left: calc(-1 * var(--container-padding));
+  margin-right: calc(-1 * var(--container-padding));
+}
+
+@media (min-width: 1440px) {
+  .img-full-bleed {
+    margin-left: calc((100% - 100vw) / 2);
+    margin-right: calc((100% - 100vw) / 2);
+  }
 }
 
 a {

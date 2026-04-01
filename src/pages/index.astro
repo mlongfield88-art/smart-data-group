@@ -38,8 +38,8 @@ import SectionHeader from '@/components/SectionHeader.astro';
         </div>
       </div>
 
-      <div class="hero__visual parallax" data-speed="-0.08">
-        <div class="img-crop clip-reveal" style="aspect-ratio: 3/2;">
+      <div class="hero__visual parallax img-full-bleed" data-speed="-0.08">
+        <div class="img-crop clip-reveal" style="aspect-ratio: 2.5/1;">
           <img
             src="/images/hero-parliament.jpeg"
             alt="UK Parliament and Westminster at twilight — Smart Data Group launch event"
@@ -304,7 +304,7 @@ import SectionHeader from '@/components/SectionHeader.astro';
   }
 
   .hero__visual {
-    max-width: 900px;
+    max-width: none;
   }
 
   /* --- Marquee Strip --- */
@@ -455,6 +455,10 @@ import SectionHeader from '@/components/SectionHeader.astro';
 
   .news-card:hover .text-h3 {
     color: var(--color-accent);
+  }
+
+  .news-card .img-crop {
+    border-radius: var(--radius-sm);
   }
 
   .news-preview__cta {
