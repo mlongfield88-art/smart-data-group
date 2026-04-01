@@ -1,39 +1,39 @@
 /* ============================================
    SMART DATA GROUP — Design System
-   Premium Editorial B2B Aesthetic
+   Corporate Navy Blue Aesthetic
    ============================================ */
 
 /* --- CSS Custom Properties --- */
 :root {
-  /* Palette */
-  --color-obsidian: #0a0a0a;
-  --color-charcoal: #141414;
-  --color-graphite: #1e1e1e;
-  --color-slate: #2a2a2a;
-  --color-pewter: #6b6b6b;
-  --color-silver: #999999;
-  --color-ash: #c4c4c4;
-  --color-fog: #e8e4df;
-  --color-alabaster: #f5f0eb;
+  /* Palette — Navy Blue */
+  --color-obsidian: #051a53;
+  --color-charcoal: #0d1b3e;
+  --color-graphite: #132450;
+  --color-slate: #1a3068;
+  --color-pewter: #7880a0;
+  --color-silver: #acafc9;
+  --color-ash: #b2b5cb;
+  --color-fog: #e2e2e2;
+  --color-alabaster: #f6f6f6;
   --color-white: #ffffff;
 
-  /* Accent — warm, understated gold */
-  --color-accent: #c9a96e;
-  --color-accent-muted: #b8975a;
+  /* Accent — corporate blue */
+  --color-accent: #5b7bd4;
+  --color-accent-muted: #7b95e0;
 
   /* Functional */
   --color-bg: var(--color-obsidian);
   --color-bg-elevated: var(--color-charcoal);
   --color-bg-surface: var(--color-graphite);
-  --color-text-primary: var(--color-alabaster);
+  --color-text-primary: var(--color-white);
   --color-text-secondary: var(--color-silver);
   --color-text-muted: var(--color-pewter);
-  --color-border: rgba(245, 240, 235, 0.08);
-  --color-border-hover: rgba(245, 240, 235, 0.16);
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-border-hover: rgba(255, 255, 255, 0.2);
 
   /* Typography */
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-display: 'Inter', sans-serif;
+  --font-sans: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'Montserrat', sans-serif;
 
   /* Spacing scale (8px base) */
   --space-1: 0.25rem;
@@ -134,32 +134,35 @@ ol {
 /* --- Typography Utilities --- */
 .text-display {
   font-family: var(--font-display);
-  font-size: clamp(3rem, 8vw, 7.5rem);
-  font-weight: 300;
-  line-height: 0.95;
-  letter-spacing: -0.03em;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
   color: var(--color-text-primary);
 }
 
 .text-h1 {
-  font-size: clamp(2.5rem, 6vw, 5rem);
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -0.025em;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
 }
 
 .text-h2 {
-  font-size: clamp(1.75rem, 3.5vw, 3rem);
-  font-weight: 400;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
 }
 
 .text-h3 {
-  font-size: clamp(1.25rem, 2vw, 1.75rem);
-  font-weight: 500;
-  line-height: 1.25;
-  letter-spacing: -0.01em;
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.005em;
 }
 
 .text-body-lg {
@@ -318,6 +321,7 @@ ol {
 .card:hover {
   border-color: var(--color-border-hover);
   transform: translateY(-2px);
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
 }
 
 /* --- Animation States --- */
