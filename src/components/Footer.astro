@@ -1,0 +1,167 @@
+---
+const currentYear = new Date().getFullYear();
+
+const footerLinks = {
+  company: [
+    { href: '/about', label: 'About Us' },
+    { href: '/news', label: 'News & Insights' },
+    { href: '/events', label: 'Events' },
+    { href: '/contact', label: 'Contact' },
+  ],
+  focus: [
+    { href: '#', label: 'Data Sharing Frameworks' },
+    { href: '#', label: 'Standards & Governance' },
+    { href: '#', label: 'Industry Collaboration' },
+    { href: '#', label: 'Research & Publications' },
+  ],
+  connect: [
+    { href: 'https://linkedin.com', label: 'LinkedIn' },
+    { href: 'https://twitter.com', label: 'X / Twitter' },
+  ],
+};
+---
+
+<footer class="footer section">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <span class="nav__logo-mark">SDG</span>
+          <span class="footer__logo-text">Smart Data Group</span>
+        </div>
+        <p class="footer__tagline text-body-lg">
+          Enabling the data-sharing economy through standards, governance, and cross-industry collaboration.
+        </p>
+      </div>
+
+      <div class="footer__links-grid">
+        <div class="footer__col">
+          <h4 class="text-label">Company</h4>
+          <ul>
+            {footerLinks.company.map((link) => (
+              <li><a href={link.href} class="footer__link">{link.label}</a></li>
+            ))}
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="text-label">Focus Areas</h4>
+          <ul>
+            {footerLinks.focus.map((link) => (
+              <li><a href={link.href} class="footer__link">{link.label}</a></li>
+            ))}
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="text-label">Connect</h4>
+          <ul>
+            {footerLinks.connect.map((link) => (
+              <li><a href={link.href} class="footer__link" target="_blank" rel="noopener">{link.label}</a></li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider" style="margin: var(--space-10) 0 var(--space-6);"></div>
+
+    <div class="footer__bottom">
+      <p class="text-caption">&copy; {currentYear} Smart Data Group. All rights reserved.</p>
+      <div class="footer__legal">
+        <a href="#" class="text-caption footer__legal-link">Privacy Policy</a>
+        <a href="#" class="text-caption footer__legal-link">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--color-bg);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .footer__top {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-16);
+  }
+
+  .footer__logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-6);
+  }
+
+  .footer__logo-text {
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  .footer__tagline {
+    max-width: 360px;
+  }
+
+  .footer__links-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+  }
+
+  .footer__col h4 {
+    margin-bottom: var(--space-5);
+  }
+
+  .footer__col ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .footer__link {
+    font-size: 0.9375rem;
+    color: var(--color-text-secondary);
+    transition: color var(--duration-fast) ease;
+  }
+
+  .footer__link:hover {
+    color: var(--color-text-primary);
+  }
+
+  .footer__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer__legal {
+    display: flex;
+    gap: var(--space-6);
+  }
+
+  .footer__legal-link {
+    transition: color var(--duration-fast) ease;
+  }
+
+  .footer__legal-link:hover {
+    color: var(--color-text-primary);
+  }
+
+  @media (max-width: 768px) {
+    .footer__top {
+      grid-template-columns: 1fr;
+      gap: var(--space-10);
+    }
+
+    .footer__links-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-8);
+    }
+
+    .footer__bottom {
+      flex-direction: column;
+      gap: var(--space-4);
+      text-align: center;
+    }
+  }
+</style>

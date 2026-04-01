@@ -1,0 +1,244 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import AnimatedText from '@/components/AnimatedText.astro';
+import ImagePlaceholder from '@/components/ImagePlaceholder.astro';
+
+const articles = [
+  {
+    date: 'March 2026',
+    category: 'Framework',
+    title: 'SDG Publishes New Framework for Cross-Border Data Sharing',
+    excerpt: 'A comprehensive guide for organizations looking to share data across international jurisdictions while remaining compliant with evolving regulatory landscapes.',
+    image: 'Conference room with floor-to-ceiling windows — editorial workspace photography',
+    color: '#1a2733',
+    featured: true,
+  },
+  {
+    date: 'February 2026',
+    category: 'Event',
+    title: 'Annual Data Economy Summit Recap: Key Takeaways',
+    excerpt: 'Insights from our flagship event where 500+ leaders gathered to shape the future of trusted data ecosystems.',
+    image: 'Large conference hall during keynote — event photography with dramatic lighting',
+    color: '#3d2e1f',
+    featured: true,
+  },
+  {
+    date: 'January 2026',
+    category: 'Members',
+    title: 'New Members Join Smart Data Group Working Groups',
+    excerpt: 'Twelve new organizations from five countries have joined our active working groups on data interoperability and consent management.',
+    image: 'Group of professionals in discussion — candid editorial meeting photography',
+    color: '#1f2429',
+  },
+  {
+    date: 'December 2025',
+    category: 'Research',
+    title: 'The State of Data Sharing in Financial Services',
+    excerpt: 'Our latest research report examines how financial institutions are approaching data collaboration, open banking, and regulatory compliance.',
+    image: 'Close-up of financial documents on a clean desk — editorial detail shot',
+    color: '#33291a',
+  },
+  {
+    date: 'November 2025',
+    category: 'Policy',
+    title: 'Responding to the EU Data Act: What Organizations Need to Know',
+    excerpt: 'Smart Data Group releases practical guidance for organizations preparing for the EU Data Act implementation timeline.',
+    image: 'European Parliament building exterior — editorial architectural photography',
+    color: '#1a2733',
+  },
+  {
+    date: 'October 2025',
+    category: 'Standards',
+    title: 'Interoperability Standard v2.0 Released',
+    excerpt: 'The updated standard includes new specifications for consent management, data provenance tracking, and cross-sector vocabulary alignment.',
+    image: 'Abstract close-up of glass and steel building facade — minimalist architectural detail',
+    color: '#2a2a2a',
+  },
+];
+
+const featured = articles.filter((a) => a.featured);
+const regular = articles.filter((a) => !a.featured);
+---
+
+<Layout title="News" description="Latest news, insights, and publications from Smart Data Group.">
+
+  <!-- ======== PAGE HERO ======== -->
+  <section class="page-hero section-lg">
+    <div class="container">
+      <p class="text-label reveal">News & Insights</p>
+      <AnimatedText
+        tag="h1"
+        class="text-display"
+        lines={[
+          "Perspectives on",
+          "the data economy."
+        ]}
+      />
+    </div>
+  </section>
+
+  <!-- ======== FEATURED ======== -->
+  <section class="container">
+    <div class="featured-grid stagger-reveal">
+      {featured.map((article) => (
+        <a href="#" class="featured-card">
+          <ImagePlaceholder
+            alt={article.image}
+            aspect="16/10"
+            color={article.color}
+          />
+          <div class="featured-card__content">
+            <div class="featured-card__meta">
+              <span class="text-label">{article.category}</span>
+              <time class="text-caption">{article.date}</time>
+            </div>
+            <h2 class="text-h2">{article.title}</h2>
+            <p class="text-body-lg">{article.excerpt}</p>
+            <span class="featured-card__link">
+              Read Article <span class="btn-arrow">&rarr;</span>
+            </span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- ======== ARTICLE LIST ======== -->
+  <section class="section">
+    <div class="container">
+      <div class="divider line-grow" style="margin-bottom: var(--space-12);"></div>
+
+      <div class="articles-list stagger-reveal">
+        {regular.map((article) => (
+          <a href="#" class="article-row">
+            <div class="article-row__left">
+              <span class="text-label">{article.category}</span>
+              <time class="text-caption">{article.date}</time>
+            </div>
+            <div class="article-row__center">
+              <h3 class="text-h3">{article.title}</h3>
+              <p class="text-body">{article.excerpt}</p>
+            </div>
+            <div class="article-row__right">
+              <ImagePlaceholder
+                alt={article.image}
+                aspect="3/2"
+                color={article.color}
+              />
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .page-hero {
+    padding-top: calc(var(--space-24) + 80px);
+  }
+
+  /* --- Featured --- */
+  .featured-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--grid-gap);
+  }
+
+  .featured-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+    transition: transform var(--duration-fast) var(--ease-out-quart);
+  }
+
+  .featured-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .featured-card__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .featured-card__meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+  }
+
+  .featured-card__link {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-accent);
+    margin-top: var(--space-3);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  .featured-card:hover .featured-card__link .btn-arrow {
+    transform: translateX(4px);
+  }
+
+  .featured-card__link .btn-arrow {
+    transition: transform var(--duration-fast) var(--ease-out-quart);
+  }
+
+  /* --- Article Rows --- */
+  .articles-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .article-row {
+    display: grid;
+    grid-template-columns: 160px 1fr 200px;
+    gap: var(--space-8);
+    align-items: center;
+    padding: var(--space-8) 0;
+    border-bottom: 1px solid var(--color-border);
+    transition: all var(--duration-fast) ease;
+  }
+
+  .article-row:hover {
+    padding-left: var(--space-4);
+  }
+
+  .article-row:hover .text-h3 {
+    color: var(--color-accent);
+  }
+
+  .article-row__left {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .article-row__center {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .article-row__center .text-h3 {
+    transition: color var(--duration-fast) ease;
+  }
+
+  @media (max-width: 768px) {
+    .featured-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .article-row {
+      grid-template-columns: 1fr;
+      gap: var(--space-4);
+    }
+
+    .article-row__right {
+      display: none;
+    }
+  }
+</style>

@@ -1,0 +1,40 @@
+---
+interface Props {
+  label?: string;
+  title: string;
+  description?: string;
+  align?: 'left' | 'center';
+}
+
+const { label, title, description, align = 'left' } = Astro.props;
+---
+
+<div class:list={['section-header reveal', `align-${align}`]}>
+  {label && <p class="text-label">{label}</p>}
+  <h2 class="text-h2 section-header__title">{title}</h2>
+  {description && <p class="text-body-lg section-header__desc">{description}</p>}
+</div>
+
+<style>
+  .section-header {
+    margin-bottom: var(--space-12);
+  }
+
+  .section-header__title {
+    margin-top: var(--space-4);
+  }
+
+  .section-header__desc {
+    margin-top: var(--space-5);
+    max-width: 640px;
+  }
+
+  .align-center {
+    text-align: center;
+  }
+
+  .align-center .section-header__desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>

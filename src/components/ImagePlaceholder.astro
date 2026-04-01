@@ -1,0 +1,79 @@
+---
+interface Props {
+  alt: string;
+  aspect?: string;
+  color?: string;
+  class?: string;
+}
+
+const {
+  alt,
+  aspect = '16/9',
+  color = '#1e1e1e',
+  class: className = '',
+} = Astro.props;
+
+// Generate distinct placeholder colors based on alt text
+const colors: Record<string, string> = {
+  warm: '#3d2e1f',
+  cool: '#1a2733',
+  neutral: '#2a2a2a',
+  accent: '#33291a',
+  muted: '#1f2429',
+};
+
+// Pick a color from the map or use provided
+const bgColor = colors[color] || color;
+---
+
+<div
+  class:list={['img-placeholder clip-reveal', className]}
+  style={`aspect-ratio: ${aspect}; background-color: ${bgColor};`}
+  role="img"
+  aria-label={alt}
+>
+  <div class="img-placeholder__inner">
+    <svg class="img-placeholder__icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+      <circle cx="8.5" cy="8.5" r="1.5" />
+      <polyline points="21 15 16 10 5 21" />
+    </svg>
+    <p class="img-placeholder__label">{alt}</p>
+  </div>
+</div>
+
+<style>
+  .img-placeholder {
+    position: relative;
+    width: 100%;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .img-placeholder__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-6);
+    text-align: center;
+  }
+
+  .img-placeholder__icon {
+    color: var(--color-pewter);
+    opacity: 0.5;
+  }
+
+  .img-placeholder__label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-pewter);
+    max-width: 200px;
+    opacity: 0.6;
+  }
+</style>

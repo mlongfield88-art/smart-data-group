@@ -1,0 +1,498 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import AnimatedText from '@/components/AnimatedText.astro';
+import ImagePlaceholder from '@/components/ImagePlaceholder.astro';
+import SectionHeader from '@/components/SectionHeader.astro';
+---
+
+<Layout title="Home" description="Smart Data Group — Enabling the data-sharing economy through standards, governance, and collaboration.">
+
+  <!-- ======== HERO ======== -->
+  <section class="hero section-lg">
+    <div class="container">
+      <div class="hero__content">
+        <p class="text-label reveal">Enabling the Data-Sharing Economy</p>
+
+        <AnimatedText
+          tag="h1"
+          class="text-display hero__headline"
+          lines={[
+            "Unlocking the",
+            "value of shared",
+            "data ecosystems."
+          ]}
+        />
+
+        <div class="hero__sub reveal">
+          <p class="text-body-lg">
+            Smart Data Group brings together industry leaders, policymakers, and technologists to establish the frameworks and standards that make trusted data sharing a reality.
+          </p>
+          <div class="hero__actions">
+            <a href="/about" class="btn btn-primary">
+              Learn More <span class="btn-arrow">&rarr;</span>
+            </a>
+            <a href="/contact" class="btn btn-outline">
+              Get Involved <span class="btn-arrow">&rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__visual parallax" data-speed="-0.08">
+        <ImagePlaceholder
+          alt="Abstract architectural glass structure — premium editorial photograph"
+          aspect="3/2"
+          color="#1a2733"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== MARQUEE STRIP ======== -->
+  <div class="marquee-strip">
+    <div class="marquee-strip__inner">
+      <span>Data Governance</span>
+      <span class="marquee-dot"></span>
+      <span>Interoperability</span>
+      <span class="marquee-dot"></span>
+      <span>Trust Frameworks</span>
+      <span class="marquee-dot"></span>
+      <span>Open Standards</span>
+      <span class="marquee-dot"></span>
+      <span>Cross-Industry Collaboration</span>
+      <span class="marquee-dot"></span>
+      <span>Data Governance</span>
+      <span class="marquee-dot"></span>
+      <span>Interoperability</span>
+      <span class="marquee-dot"></span>
+      <span>Trust Frameworks</span>
+      <span class="marquee-dot"></span>
+      <span>Open Standards</span>
+      <span class="marquee-dot"></span>
+      <span>Cross-Industry Collaboration</span>
+      <span class="marquee-dot"></span>
+    </div>
+  </div>
+
+  <!-- ======== CAPABILITIES ======== -->
+  <section class="section" id="capabilities">
+    <div class="container">
+      <SectionHeader
+        label="What We Do"
+        title="Building the infrastructure for a data-sharing economy."
+        description="We convene stakeholders across sectors to develop shared standards, governance models, and practical toolkits that unlock the potential of data collaboration."
+      />
+
+      <div class="capabilities-grid stagger-reveal">
+        <div class="capability-card card">
+          <span class="capability-number">01</span>
+          <h3 class="text-h3">Standards & Frameworks</h3>
+          <p class="text-body">Developing interoperable standards that allow organizations to share data confidently, securely, and at scale across industries.</p>
+        </div>
+
+        <div class="capability-card card">
+          <span class="capability-number">02</span>
+          <h3 class="text-h3">Data Governance</h3>
+          <p class="text-body">Creating governance models that balance innovation with privacy, ensuring ethical and compliant data usage.</p>
+        </div>
+
+        <div class="capability-card card">
+          <span class="capability-number">03</span>
+          <h3 class="text-h3">Industry Collaboration</h3>
+          <p class="text-body">Facilitating cross-sector dialogue between enterprises, regulators, and researchers to identify shared data opportunities.</p>
+        </div>
+
+        <div class="capability-card card">
+          <span class="capability-number">04</span>
+          <h3 class="text-h3">Research & Insights</h3>
+          <p class="text-body">Publishing thought leadership, case studies, and white papers that inform policy and guide organizational strategy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== IMPACT / STATS ======== -->
+  <section class="stats-section section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat reveal">
+          <span class="stat__number counter" data-target="150" data-suffix="+">0</span>
+          <span class="stat__label text-caption">Member Organizations</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__number counter" data-target="40" data-suffix="+">0</span>
+          <span class="stat__label text-caption">Countries Represented</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__number counter" data-target="25" data-suffix="">0</span>
+          <span class="stat__label text-caption">Standards Published</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__number counter" data-target="12" data-suffix="">0</span>
+          <span class="stat__label text-caption">Active Working Groups</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== EDITORIAL SPLIT ======== -->
+  <section class="editorial section">
+    <div class="container">
+      <div class="editorial__grid">
+        <div class="editorial__media">
+          <ImagePlaceholder
+            alt="Aerial view of a modern city at dusk — editorial urban photography"
+            aspect="4/5"
+            color="#3d2e1f"
+          />
+        </div>
+        <div class="editorial__content">
+          <p class="text-label">Our Vision</p>
+          <AnimatedText
+            tag="h2"
+            class="text-h2"
+            lines={[
+              "A world where data",
+              "flows as freely and",
+              "securely as capital."
+            ]}
+          />
+          <p class="text-body-lg editorial__desc">
+            We envision an economy where organizations can share data across boundaries — safely, ethically, and at scale — creating value that no single entity could unlock alone.
+          </p>
+          <p class="text-body editorial__desc">
+            By establishing trust, interoperability, and clear governance, we help sectors as diverse as healthcare, finance, mobility, and energy collaborate on data-driven solutions to their greatest challenges.
+          </p>
+          <a href="/about" class="btn btn-accent">
+            About Our Mission <span class="btn-arrow">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== LATEST NEWS PREVIEW ======== -->
+  <section class="section news-preview">
+    <div class="container">
+      <SectionHeader
+        label="Latest"
+        title="News & Insights"
+      />
+
+      <div class="news-preview__grid stagger-reveal">
+        <a href="/news" class="news-card">
+          <ImagePlaceholder
+            alt="Conference room with natural light — minimalist workspace photography"
+            aspect="16/10"
+            color="#1f2429"
+          />
+          <div class="news-card__content">
+            <time class="text-caption">March 2026</time>
+            <h3 class="text-h3">SDG Publishes New Framework for Cross-Border Data Sharing</h3>
+            <p class="text-body">A comprehensive guide for organizations looking to share data across international jurisdictions while remaining compliant.</p>
+          </div>
+        </a>
+
+        <a href="/news" class="news-card">
+          <ImagePlaceholder
+            alt="Close-up of hands reviewing documents — editorial detail shot"
+            aspect="16/10"
+            color="#33291a"
+          />
+          <div class="news-card__content">
+            <time class="text-caption">February 2026</time>
+            <h3 class="text-h3">Annual Data Economy Summit Recap: Key Takeaways</h3>
+            <p class="text-body">Insights from our flagship event where 500+ leaders gathered to discuss the future of trusted data ecosystems.</p>
+          </div>
+        </a>
+
+        <a href="/news" class="news-card">
+          <ImagePlaceholder
+            alt="Minimalist data visualization on screen — clean technology interface"
+            aspect="16/10"
+            color="#1a2733"
+          />
+          <div class="news-card__content">
+            <time class="text-caption">January 2026</time>
+            <h3 class="text-h3">New Members Join Smart Data Group's Working Groups</h3>
+            <p class="text-body">Twelve new organizations from five countries have joined our active working groups on data interoperability.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="news-preview__cta reveal">
+        <a href="/news" class="btn btn-outline">
+          View All News <span class="btn-arrow">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== CTA BANNER ======== -->
+  <section class="cta-banner section-lg">
+    <div class="container">
+      <div class="cta-banner__inner reveal">
+        <AnimatedText
+          tag="h2"
+          class="text-h1"
+          lines={[
+            "Ready to shape the",
+            "future of data sharing?"
+          ]}
+        />
+        <p class="text-body-lg cta-banner__desc">
+          Join our community of organizations working to build the standards and infrastructure for a trusted data economy.
+        </p>
+        <div class="cta-banner__actions">
+          <a href="/contact" class="btn btn-primary">
+            Become a Member <span class="btn-arrow">&rarr;</span>
+          </a>
+          <a href="/events" class="btn btn-outline">
+            Attend an Event <span class="btn-arrow">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* --- Hero --- */
+  .hero {
+    padding-top: calc(var(--space-24) + 80px);
+  }
+
+  .hero .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+  }
+
+  .hero__headline {
+    margin-top: var(--space-6);
+  }
+
+  .hero__sub {
+    margin-top: var(--space-8);
+    max-width: 580px;
+  }
+
+  .hero__sub .text-body-lg {
+    margin-bottom: var(--space-8);
+  }
+
+  .hero__actions {
+    display: flex;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+  }
+
+  .hero__visual {
+    max-width: 900px;
+  }
+
+  /* --- Marquee Strip --- */
+  .marquee-strip {
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--space-5) 0;
+    overflow: hidden;
+  }
+
+  .marquee-strip__inner {
+    display: flex;
+    align-items: center;
+    gap: var(--space-8);
+    white-space: nowrap;
+    animation: marquee 25s linear infinite;
+    width: max-content;
+  }
+
+  .marquee-strip__inner span {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+  }
+
+  .marquee-dot {
+    width: 4px !important;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    display: inline-block;
+    flex-shrink: 0;
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* --- Capabilities --- */
+  .capabilities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--grid-gap);
+  }
+
+  .capability-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .capability-number {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--color-accent);
+  }
+
+  .capability-card .text-h3 {
+    margin-top: var(--space-2);
+  }
+
+  /* --- Stats --- */
+  .stats-section {
+    background: var(--color-bg-elevated);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--grid-gap);
+    text-align: center;
+  }
+
+  .stat__number {
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 300;
+    letter-spacing: -0.03em;
+    color: var(--color-accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat__label {
+    display: block;
+    margin-top: var(--space-3);
+  }
+
+  /* --- Editorial Split --- */
+  .editorial__grid {
+    display: grid;
+    grid-template-columns: 5fr 6fr;
+    gap: var(--space-16);
+    align-items: center;
+  }
+
+  .editorial__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+  }
+
+  .editorial__content .text-h2 {
+    margin-top: var(--space-3);
+  }
+
+  .editorial__desc {
+    max-width: 520px;
+  }
+
+  .editorial__content .btn {
+    margin-top: var(--space-4);
+    align-self: flex-start;
+  }
+
+  /* --- News Preview --- */
+  .news-preview__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--grid-gap);
+  }
+
+  .news-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+    transition: transform var(--duration-fast) var(--ease-out-quart);
+  }
+
+  .news-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .news-card__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .news-card .text-h3 {
+    transition: color var(--duration-fast) ease;
+  }
+
+  .news-card:hover .text-h3 {
+    color: var(--color-accent);
+  }
+
+  .news-preview__cta {
+    text-align: center;
+    margin-top: var(--space-12);
+  }
+
+  /* --- CTA Banner --- */
+  .cta-banner {
+    background: var(--color-bg-elevated);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .cta-banner__inner {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-6);
+  }
+
+  .cta-banner__desc {
+    max-width: 560px;
+  }
+
+  .cta-banner__actions {
+    display: flex;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: var(--space-4);
+  }
+
+  /* --- Responsive --- */
+  @media (max-width: 768px) {
+    .capabilities-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-8);
+    }
+
+    .editorial__grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-8);
+    }
+
+    .news-preview__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

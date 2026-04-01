@@ -1,0 +1,269 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import AnimatedText from '@/components/AnimatedText.astro';
+import ImagePlaceholder from '@/components/ImagePlaceholder.astro';
+import SectionHeader from '@/components/SectionHeader.astro';
+
+const upcomingEvents = [
+  {
+    date: '15–17 May 2026',
+    title: 'Data Economy Summit 2026',
+    location: 'Amsterdam, Netherlands',
+    type: 'Conference',
+    description: 'Our flagship annual conference bringing together 600+ leaders to discuss standards, governance, and the future of data-sharing ecosystems.',
+    image: 'Modern conference venue with dramatic architecture — editorial event space photography',
+    color: '#1a2733',
+  },
+  {
+    date: '3 June 2026',
+    title: 'Working Group: Cross-Border Data Flows',
+    location: 'Virtual',
+    type: 'Working Group',
+    description: 'Open session to review the latest draft of our cross-border data sharing framework and gather member feedback.',
+    image: 'Laptop on a clean desk with natural light — remote work photography',
+    color: '#33291a',
+  },
+  {
+    date: '24 June 2026',
+    title: 'Roundtable: Data Trusts in Healthcare',
+    location: 'London, UK',
+    type: 'Roundtable',
+    description: 'An intimate, invite-only discussion with healthcare leaders exploring the role of data trusts in medical research collaboration.',
+    image: 'Modern hospital corridor with natural light — editorial healthcare photography',
+    color: '#1f2429',
+  },
+];
+
+const pastEvents = [
+  {
+    date: 'February 2026',
+    title: 'Annual Data Economy Summit',
+    location: 'Brussels, Belgium',
+    attendees: '500+',
+  },
+  {
+    date: 'November 2025',
+    title: 'Standards Workshop: Interoperability v2.0',
+    location: 'Berlin, Germany',
+    attendees: '120',
+  },
+  {
+    date: 'September 2025',
+    title: 'Policy Forum: EU Data Act Preparation',
+    location: 'Virtual',
+    attendees: '300+',
+  },
+  {
+    date: 'June 2025',
+    title: 'Roundtable: Financial Data Sharing',
+    location: 'Zurich, Switzerland',
+    attendees: '45',
+  },
+];
+---
+
+<Layout title="Events" description="Upcoming conferences, workshops, and roundtables from Smart Data Group.">
+
+  <!-- ======== PAGE HERO ======== -->
+  <section class="page-hero section-lg">
+    <div class="container">
+      <p class="text-label reveal">Events</p>
+      <AnimatedText
+        tag="h1"
+        class="text-display"
+        lines={[
+          "Where the data",
+          "economy convenes."
+        ]}
+      />
+      <p class="text-body-lg page-hero__intro reveal">
+        From our flagship summit to intimate roundtables, SDG events bring together the people shaping the future of trusted data sharing.
+      </p>
+    </div>
+  </section>
+
+  <!-- ======== UPCOMING EVENTS ======== -->
+  <section class="section">
+    <div class="container">
+      <SectionHeader
+        label="Upcoming"
+        title="Mark your calendar."
+      />
+
+      <div class="events-list stagger-reveal">
+        {upcomingEvents.map((event) => (
+          <div class="event-card">
+            <div class="event-card__media">
+              <ImagePlaceholder
+                alt={event.image}
+                aspect="16/10"
+                color={event.color}
+              />
+            </div>
+            <div class="event-card__content">
+              <div class="event-card__meta">
+                <span class="text-label">{event.type}</span>
+                <time class="text-caption">{event.date}</time>
+              </div>
+              <h3 class="text-h2">{event.title}</h3>
+              <p class="event-card__location text-caption">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                {event.location}
+              </p>
+              <p class="text-body">{event.description}</p>
+              <a href="/contact" class="btn btn-primary event-card__btn">
+                Register Interest <span class="btn-arrow">&rarr;</span>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== PAST EVENTS ======== -->
+  <section class="section past-events">
+    <div class="container">
+      <SectionHeader
+        label="Archive"
+        title="Past events."
+      />
+
+      <div class="past-events__table stagger-reveal">
+        <div class="past-events__header">
+          <span class="text-caption">Date</span>
+          <span class="text-caption">Event</span>
+          <span class="text-caption">Location</span>
+          <span class="text-caption">Attendees</span>
+        </div>
+
+        {pastEvents.map((event) => (
+          <div class="past-event-row">
+            <time class="text-body">{event.date}</time>
+            <span class="text-body" style="color: var(--color-text-primary); font-weight: 500;">{event.title}</span>
+            <span class="text-body">{event.location}</span>
+            <span class="text-body">{event.attendees}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== CTA ======== -->
+  <section class="section-lg cta-banner">
+    <div class="container">
+      <div class="cta-inner reveal" style="text-align: center; max-width: 640px; margin: 0 auto;">
+        <p class="text-label">Host With Us</p>
+        <h2 class="text-h2" style="margin-top: var(--space-4);">Interested in co-hosting an event or speaking at one of ours?</h2>
+        <a href="/contact" class="btn btn-accent" style="margin-top: var(--space-8);">
+          Get in Touch <span class="btn-arrow">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .page-hero {
+    padding-top: calc(var(--space-24) + 80px);
+  }
+
+  .page-hero__intro {
+    max-width: 640px;
+    margin-top: var(--space-8);
+  }
+
+  /* --- Event Cards --- */
+  .events-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-10);
+  }
+
+  .event-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-10);
+    align-items: center;
+    padding-bottom: var(--space-10);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .event-card:last-child {
+    border-bottom: none;
+  }
+
+  .event-card__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .event-card__meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+  }
+
+  .event-card__location {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  .event-card__location svg {
+    flex-shrink: 0;
+  }
+
+  .event-card__btn {
+    align-self: flex-start;
+    margin-top: var(--space-4);
+  }
+
+  /* --- Past Events Table --- */
+  .past-events {
+    background: var(--color-bg-elevated);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .past-events__header,
+  .past-event-row {
+    display: grid;
+    grid-template-columns: 180px 1fr 200px 100px;
+    gap: var(--space-6);
+    padding: var(--space-5) 0;
+  }
+
+  .past-events__header {
+    border-bottom: 1px solid var(--color-border-hover);
+  }
+
+  .past-event-row {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  /* --- CTA --- */
+  .cta-banner {
+    border-top: 1px solid var(--color-border);
+  }
+
+  @media (max-width: 768px) {
+    .event-card {
+      grid-template-columns: 1fr;
+      gap: var(--space-6);
+    }
+
+    .past-events__header {
+      display: none;
+    }
+
+    .past-event-row {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-3);
+    }
+  }
+</style>

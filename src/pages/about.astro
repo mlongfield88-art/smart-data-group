@@ -1,0 +1,292 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import AnimatedText from '@/components/AnimatedText.astro';
+import ImagePlaceholder from '@/components/ImagePlaceholder.astro';
+import SectionHeader from '@/components/SectionHeader.astro';
+---
+
+<Layout title="About" description="Learn about Smart Data Group's mission, team, and approach to enabling the data-sharing economy.">
+
+  <!-- ======== PAGE HERO ======== -->
+  <section class="page-hero section-lg">
+    <div class="container">
+      <p class="text-label reveal">About Us</p>
+      <AnimatedText
+        tag="h1"
+        class="text-display"
+        lines={[
+          "Convening the",
+          "architects of a",
+          "data economy."
+        ]}
+      />
+      <p class="text-body-lg page-hero__intro reveal">
+        Smart Data Group is an independent, member-driven organization dedicated to building the infrastructure — standards, governance, and trust — that a thriving data-sharing economy requires.
+      </p>
+    </div>
+  </section>
+
+  <!-- ======== FULL-WIDTH IMAGE ======== -->
+  <section class="container">
+    <ImagePlaceholder
+      alt="Panoramic view of a contemporary glass-and-stone office building — premium architectural photography"
+      aspect="21/9"
+      color="#1a2733"
+    />
+  </section>
+
+  <!-- ======== MISSION ======== -->
+  <section class="section">
+    <div class="container">
+      <div class="about-split">
+        <div class="about-split__left">
+          <p class="text-label">Our Mission</p>
+          <AnimatedText
+            tag="h2"
+            class="text-h2"
+            lines={[
+              "Making data sharing",
+              "safe, interoperable,",
+              "and economically viable."
+            ]}
+          />
+        </div>
+        <div class="about-split__right reveal">
+          <p class="text-body-lg">
+            We believe that the data economy cannot reach its potential without shared rules of engagement. Organizations want to share data but lack the trust frameworks, technical standards, and legal templates to do so responsibly.
+          </p>
+          <p class="text-body">
+            Smart Data Group bridges that gap. We bring together enterprises, startups, policymakers, and researchers to co-develop practical, sector-agnostic solutions — from governance toolkits and consent architectures to interoperability specifications.
+          </p>
+          <p class="text-body">
+            Our work ensures that data can flow between organizations and across borders while respecting privacy, sovereignty, and ethical principles.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== VALUES ======== -->
+  <section class="section values-section">
+    <div class="container">
+      <SectionHeader
+        label="Our Values"
+        title="Principles that guide our work."
+        align="center"
+      />
+
+      <div class="values-grid stagger-reveal">
+        <div class="value-item">
+          <div class="value-item__marker"></div>
+          <h3 class="text-h3">Trust & Transparency</h3>
+          <p class="text-body">We operate with radical openness. Our standards processes are transparent, our governance is accountable, and our outputs are publicly available.</p>
+        </div>
+
+        <div class="value-item">
+          <div class="value-item__marker"></div>
+          <h3 class="text-h3">Inclusive Collaboration</h3>
+          <p class="text-body">We bring diverse voices to the table — across sectors, geographies, and organization sizes — because data ecosystems only work when everyone can participate.</p>
+        </div>
+
+        <div class="value-item">
+          <div class="value-item__marker"></div>
+          <h3 class="text-h3">Practical Impact</h3>
+          <p class="text-body">We measure success by adoption. Our standards and toolkits are designed to be implemented, not just published.</p>
+        </div>
+
+        <div class="value-item">
+          <div class="value-item__marker"></div>
+          <h3 class="text-h3">Ethical Stewardship</h3>
+          <p class="text-body">We believe data sharing must serve people. Privacy, consent, and equity are non-negotiable foundations of every framework we create.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== TEAM SECTION ======== -->
+  <section class="section">
+    <div class="container">
+      <SectionHeader
+        label="Leadership"
+        title="Meet the team driving the data-sharing agenda."
+        description="Our leadership brings together decades of experience across technology, policy, regulation, and industry."
+      />
+
+      <div class="team-grid stagger-reveal">
+        <div class="team-member">
+          <ImagePlaceholder
+            alt="Professional headshot — executive portrait, neutral background"
+            aspect="3/4"
+            color="#2a2a2a"
+          />
+          <h3 class="text-h3">Jane Richardson</h3>
+          <p class="text-caption">Executive Director</p>
+        </div>
+
+        <div class="team-member">
+          <ImagePlaceholder
+            alt="Professional headshot — executive portrait, neutral background"
+            aspect="3/4"
+            color="#1f2429"
+          />
+          <h3 class="text-h3">Dr. Marcus Chen</h3>
+          <p class="text-caption">Head of Standards</p>
+        </div>
+
+        <div class="team-member">
+          <ImagePlaceholder
+            alt="Professional headshot — executive portrait, neutral background"
+            aspect="3/4"
+            color="#33291a"
+          />
+          <h3 class="text-h3">Sarah Okafor</h3>
+          <p class="text-caption">Director of Policy</p>
+        </div>
+
+        <div class="team-member">
+          <ImagePlaceholder
+            alt="Professional headshot — executive portrait, neutral background"
+            aspect="3/4"
+            color="#1a2733"
+          />
+          <h3 class="text-h3">Thomas Berger</h3>
+          <p class="text-caption">Head of Partnerships</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== PARTNERS STRIP ======== -->
+  <section class="section-sm partners-section">
+    <div class="container">
+      <p class="text-caption" style="text-align: center; margin-bottom: var(--space-8);">Trusted by organizations across sectors</p>
+      <div class="partners-row reveal">
+        {['Enterprise Partner A', 'Government Body B', 'Research Institute C', 'Tech Consortium D', 'Finance Alliance E', 'Health Data Org F'].map((name) => (
+          <div class="partner-logo">
+            <span>{name}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .page-hero {
+    padding-top: calc(var(--space-24) + 80px);
+  }
+
+  .page-hero__intro {
+    max-width: 680px;
+    margin-top: var(--space-8);
+  }
+
+  /* --- About Split --- */
+  .about-split {
+    display: grid;
+    grid-template-columns: 5fr 6fr;
+    gap: var(--space-16);
+  }
+
+  .about-split__right {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+  }
+
+  /* --- Values --- */
+  .values-section {
+    background: var(--color-bg-elevated);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-8);
+  }
+
+  .value-item {
+    padding: var(--space-8);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .value-item__marker {
+    width: 32px;
+    height: 2px;
+    background: var(--color-accent);
+  }
+
+  /* --- Team --- */
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--grid-gap);
+  }
+
+  .team-member {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .team-member .text-h3 {
+    font-size: 1.125rem;
+  }
+
+  .team-member .text-caption {
+    margin-top: calc(-1 * var(--space-2));
+  }
+
+  /* --- Partners --- */
+  .partners-section {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .partners-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-8);
+    flex-wrap: wrap;
+  }
+
+  .partner-logo {
+    padding: var(--space-4) var(--space-6);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+  }
+
+  .partner-logo span {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+  }
+
+  @media (max-width: 768px) {
+    .about-split {
+      grid-template-columns: 1fr;
+      gap: var(--space-8);
+    }
+
+    .values-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .team-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .partners-row {
+      justify-content: center;
+    }
+  }
+</style>

@@ -1,0 +1,34 @@
+---
+/**
+ * AnimatedText — wraps each line in a mask for GSAP line-reveal animation.
+ * Usage: <AnimatedText tag="h2" class="text-h2" lines={["Line one", "Line two"]} />
+ */
+interface Props {
+  tag?: string;
+  lines: string[];
+  class?: string;
+}
+
+const { tag: Tag = 'h2', lines, class: className = '' } = Astro.props;
+const TagName = Tag as any;
+---
+
+<TagName class:list={['text-mask-reveal', className]}>
+  {lines.map((line) => (
+    <span class="line-wrap">
+      <span class="line">{line}</span>
+    </span>
+  ))}
+</TagName>
+
+<style>
+  .line-wrap {
+    display: block;
+    overflow: hidden;
+  }
+
+  .line {
+    display: block;
+    will-change: transform;
+  }
+</style>
