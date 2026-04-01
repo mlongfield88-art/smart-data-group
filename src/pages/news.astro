@@ -82,13 +82,14 @@ const regular = articles.filter((a) => !a.featured);
     <div class="featured-grid stagger-reveal">
       {featured.map((article) => (
         <a href="#" class="featured-card">
-          <img
-            src={article.src}
-            alt={article.alt}
-            class="clip-reveal"
-            style="aspect-ratio: 16/10; width: 100%; object-fit: cover; border-radius: var(--radius-md);"
-            loading="lazy"
-          />
+          <div class="img-crop clip-reveal" style="aspect-ratio: 16/10;">
+            <img
+              src={article.src}
+              alt={article.alt}
+              style="width: 100%; height: 100%; object-fit: cover;"
+              loading="lazy"
+            />
+          </div>
           <div class="featured-card__content">
             <div class="featured-card__meta">
               <span class="text-label">{article.category}</span>
@@ -122,12 +123,14 @@ const regular = articles.filter((a) => !a.featured);
               <p class="text-body">{article.excerpt}</p>
             </div>
             <div class="article-row__right">
-              <img
-                src={article.src}
-                alt={article.alt}
-                style="aspect-ratio: 3/2; width: 100%; object-fit: cover; border-radius: var(--radius-md);"
-                loading="lazy"
-              />
+              <div class="img-crop" style="aspect-ratio: 3/2;">
+                <img
+                  src={article.src}
+                  alt={article.alt}
+                  style="width: 100%; height: 100%; object-fit: cover;"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </a>
         ))}

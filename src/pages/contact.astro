@@ -101,12 +101,14 @@ import ImagePlaceholder from '@/components/ImagePlaceholder.astro';
 
           <div class="divider" style="margin: var(--space-6) 0;"></div>
 
-          <img
-            src="/images/parliament-portal.jpeg"
-            alt="UK Parliament archway — Smart Data Group"
-            style="aspect-ratio: 4/3; width: 100%; object-fit: cover; border-radius: var(--radius-md);"
-            loading="lazy"
-          />
+          <div class="img-crop" style="aspect-ratio: 4/3;">
+            <img
+              src="/images/parliament-portal.jpeg"
+              alt="UK Parliament archway — Smart Data Group"
+              style="width: 100%; height: 100%; object-fit: cover;"
+              loading="lazy"
+            />
+          </div>
         </div>
       </div>
     </div>

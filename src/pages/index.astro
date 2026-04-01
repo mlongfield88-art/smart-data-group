@@ -39,13 +39,14 @@ import SectionHeader from '@/components/SectionHeader.astro';
       </div>
 
       <div class="hero__visual parallax" data-speed="-0.08">
-        <img
-          src="/images/hero-parliament.jpeg"
-          alt="UK Parliament and Westminster at twilight — Smart Data Group launch event"
-          class="clip-reveal"
-          style="aspect-ratio: 3/2; width: 100%; object-fit: cover; border-radius: var(--radius-md);"
-          loading="eager"
-        />
+        <div class="img-crop clip-reveal" style="aspect-ratio: 3/2;">
+          <img
+            src="/images/hero-parliament.jpeg"
+            alt="UK Parliament and Westminster at twilight — Smart Data Group launch event"
+            style="width: 100%; height: 100%; object-fit: cover;"
+            loading="eager"
+          />
+        </div>
       </div>
     </div>
   </section>
@@ -142,13 +143,14 @@ import SectionHeader from '@/components/SectionHeader.astro';
     <div class="container">
       <div class="editorial__grid">
         <div class="editorial__media">
-          <img
-            src="/images/parliament-portal.jpeg"
-            alt="UK Parliament gothic archway — Smart Data Group vision portal"
-            class="clip-reveal"
-            style="aspect-ratio: 4/5; width: 100%; object-fit: cover; border-radius: var(--radius-md);"
-            loading="lazy"
-          />
+          <div class="img-crop clip-reveal" style="aspect-ratio: 4/5;">
+            <img
+              src="/images/parliament-portal.jpeg"
+              alt="UK Parliament gothic archway — Smart Data Group vision portal"
+              style="width: 100%; height: 100%; object-fit: cover;"
+              loading="lazy"
+            />
+          </div>
         </div>
         <div class="editorial__content">
           <p class="text-label">Why Smart Data Matters</p>
@@ -185,13 +187,14 @@ import SectionHeader from '@/components/SectionHeader.astro';
 
       <div class="news-preview__grid stagger-reveal">
         <a href="/news" class="news-card">
-          <img
-            src="/images/fca-building.jpeg"
-            alt="Financial Conduct Authority building with data network light trails"
-            class="clip-reveal"
-            style="aspect-ratio: 16/10; width: 100%; object-fit: cover; border-radius: var(--radius-md);"
-            loading="lazy"
-          />
+          <div class="img-crop clip-reveal" style="aspect-ratio: 16/10;">
+            <img
+              src="/images/fca-building.jpeg"
+              alt="Financial Conduct Authority building with data network light trails"
+              style="width: 100%; height: 100%; object-fit: cover;"
+              loading="lazy"
+            />
+          </div>
           <div class="news-card__content">
             <time class="text-caption">August 2025</time>
             <h3 class="text-h3">SDG Welcomes FCA Announcement on Future Entity for UK Open Banking</h3>
@@ -200,13 +203,14 @@ import SectionHeader from '@/components/SectionHeader.astro';
         </a>
 
         <a href="/news" class="news-card">
-          <img
-            src="/images/duaa-governance.jpeg"
-            alt="Data Use and Access Act 2025 governance framework documents"
-            class="clip-reveal"
-            style="aspect-ratio: 16/10; width: 100%; object-fit: cover; border-radius: var(--radius-md);"
-            loading="lazy"
-          />
+          <div class="img-crop clip-reveal" style="aspect-ratio: 16/10;">
+            <img
+              src="/images/duaa-governance.jpeg"
+              alt="Data Use and Access Act 2025 governance framework documents"
+              style="width: 100%; height: 100%; object-fit: cover;"
+              loading="lazy"
+            />
+          </div>
           <div class="news-card__content">
             <time class="text-caption">July 2025</time>
             <h3 class="text-h3">UK Data Reforms Unpacked: The New Smart Data Schemes</h3>
@@ -215,13 +219,14 @@ import SectionHeader from '@/components/SectionHeader.astro';
         </a>
 
         <a href="/news" class="news-card">
-          <img
-            src="/images/energy-meter.jpeg"
-            alt="Smart energy meter displaying £27.8bn economic value with data streams"
-            class="clip-reveal"
-            style="aspect-ratio: 16/10; width: 100%; object-fit: cover; border-radius: var(--radius-md);"
-            loading="lazy"
-          />
+          <div class="img-crop clip-reveal" style="aspect-ratio: 16/10;">
+            <img
+              src="/images/energy-meter.jpeg"
+              alt="Smart energy meter displaying £27.8bn economic value with data streams"
+              style="width: 100%; height: 100%; object-fit: cover;"
+              loading="lazy"
+            />
+          </div>
           <div class="news-card__content">
             <time class="text-caption">January 2025</time>
             <h3 class="text-h3">Energy Smart Data Scheme Proposed in Britain</h3>

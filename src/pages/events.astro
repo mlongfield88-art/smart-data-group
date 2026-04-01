@@ -89,13 +89,14 @@ const pastEvents = [
         {upcomingEvents.map((event) => (
           <div class="event-card">
             <div class="event-card__media">
-              <img
-                src={event.src}
-                alt={event.alt}
-                class="clip-reveal"
-                style="aspect-ratio: 16/10; width: 100%; object-fit: cover; border-radius: var(--radius-md);"
-                loading="lazy"
-              />
+              <div class="img-crop clip-reveal" style="aspect-ratio: 16/10;">
+                <img
+                  src={event.src}
+                  alt={event.alt}
+                  style="width: 100%; height: 100%; object-fit: cover;"
+                  loading="lazy"
+                />
+              </div>
             </div>
             <div class="event-card__content">
               <div class="event-card__meta">
