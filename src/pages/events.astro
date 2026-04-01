@@ -6,63 +6,57 @@ import SectionHeader from '@/components/SectionHeader.astro';
 
 const upcomingEvents = [
   {
-    date: '15–17 May 2026',
-    title: 'Data Economy Summit 2026',
-    location: 'Amsterdam, Netherlands',
+    date: '2026',
+    title: 'Smart Data Economy Conference 2026',
+    location: 'London, UK',
     type: 'Conference',
-    description: 'Our flagship annual conference bringing together 600+ leaders to discuss standards, governance, and the future of data-sharing ecosystems.',
-    image: 'Modern conference venue with dramatic architecture — editorial event space photography',
+    description: 'Bringing together policymakers, regulators, industry leaders, and innovators to explore the future of smart data schemes across the UK economy.',
+    image: 'Modern conference venue in London — smart data industry event',
     color: '#071e4f',
   },
   {
-    date: '3 June 2026',
-    title: 'Working Group: Cross-Border Data Flows',
-    location: 'Virtual',
-    type: 'Working Group',
-    description: 'Open session to review the latest draft of our cross-border data sharing framework and gather member feedback.',
-    image: 'Laptop on a clean desk with natural light — remote work photography',
+    date: '2026',
+    title: 'Open Finance Roadmap Workshop',
+    location: 'London, UK',
+    type: 'Workshop',
+    description: 'Working with the FCA to set out the Open Finance roadmap, extending the benefits of Open Banking to mortgages, pensions, investments, and savings.',
+    image: 'Workshop session — collaborative policy discussion',
     color: '#1a3068',
   },
   {
-    date: '24 June 2026',
-    title: 'Roundtable: Data Trusts in Healthcare',
-    location: 'London, UK',
-    type: 'Roundtable',
-    description: 'An intimate, invite-only discussion with healthcare leaders exploring the role of data trusts in medical research collaboration.',
-    image: 'Modern hospital corridor with natural light — editorial healthcare photography',
+    date: '2026',
+    title: 'Transport Data Sharing: Call for Evidence',
+    location: 'Virtual',
+    type: 'Consultation',
+    description: 'The government launches a call for evidence to understand the value of a smart data scheme in the transport sector.',
+    image: 'Virtual consultation event — transport data sharing',
     color: '#0a1d45',
   },
 ];
 
 const pastEvents = [
   {
-    date: 'February 2026',
-    title: 'Annual Data Economy Summit',
-    location: 'Brussels, Belgium',
-    attendees: '500+',
-  },
-  {
-    date: 'November 2025',
-    title: 'Standards Workshop: Interoperability v2.0',
-    location: 'Berlin, Germany',
-    attendees: '120',
-  },
-  {
-    date: 'September 2025',
-    title: 'Policy Forum: EU Data Act Preparation',
-    location: 'Virtual',
-    attendees: '300+',
+    date: 'June 2025',
+    title: 'Smart Data Group Launch at UK Parliament',
+    location: 'Westminster, London',
+    attendees: '200+',
   },
   {
     date: 'June 2025',
-    title: 'Roundtable: Financial Data Sharing',
-    location: 'Zurich, Switzerland',
-    attendees: '45',
+    title: 'Data (Use and Access) Act 2025 — Industry Briefing',
+    location: 'London, UK',
+    attendees: '150+',
+  },
+  {
+    date: 'January 2025',
+    title: 'Energy Smart Data Scheme — Call for Evidence Launch',
+    location: 'Virtual',
+    attendees: '300+',
   },
 ];
 ---
 
-<Layout title="Events" description="Upcoming conferences, workshops, and roundtables from Smart Data Group.">
+<Layout title="Events" description="Upcoming conferences, workshops, and consultations from Smart Data Group.">
 
   <!-- ======== PAGE HERO ======== -->
   <section class="page-hero section-lg">
@@ -72,12 +66,13 @@ const pastEvents = [
         tag="h1"
         class="text-display"
         lines={[
-          "Where the data",
-          "economy convenes."
+          "Where the smart",
+          "data economy",
+          "convenes."
         ]}
       />
       <p class="text-body-lg page-hero__intro reveal">
-        From our flagship summit to intimate roundtables, SDG events bring together the people shaping the future of trusted data sharing.
+        From parliamentary launches to sector-specific workshops, SDG events bring together the people shaping the future of trusted data sharing in the UK.
       </p>
     </div>
   </section>

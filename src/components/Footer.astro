@@ -4,19 +4,19 @@ const currentYear = new Date().getFullYear();
 const footerLinks = {
   company: [
     { href: '/about', label: 'About Us' },
-    { href: '/news', label: 'News & Insights' },
+    { href: '/news', label: 'News' },
     { href: '/events', label: 'Events' },
     { href: '/contact', label: 'Contact' },
   ],
-  focus: [
-    { href: '#', label: 'Data Sharing Frameworks' },
-    { href: '#', label: 'Standards & Governance' },
-    { href: '#', label: 'Industry Collaboration' },
-    { href: '#', label: 'Research & Publications' },
+  divisions: [
+    { href: '/about', label: 'SDG UK' },
+    { href: '/about', label: 'Smart Data Services' },
+    { href: '/about', label: 'Smart Data International' },
+    { href: '/contact', label: 'Membership' },
   ],
   connect: [
-    { href: 'https://linkedin.com', label: 'LinkedIn' },
-    { href: 'https://twitter.com', label: 'X / Twitter' },
+    { href: 'https://www.linkedin.com/company/smart-data-group-uk', label: 'LinkedIn' },
+    { href: 'https://x.com/smartdatagroup', label: 'X / Twitter' },
   ],
 };
 ---
@@ -30,7 +30,7 @@ const footerLinks = {
           <span class="footer__logo-text">Smart Data Group</span>
         </div>
         <p class="footer__tagline text-body-lg">
-          Enabling the data-sharing economy through standards, governance, and cross-industry collaboration.
+          Empowering members to design and implement smart data schemes — unlocking innovation, better services, and economic growth across the UK economy.
         </p>
       </div>
 
@@ -44,9 +44,9 @@ const footerLinks = {
           </ul>
         </div>
         <div class="footer__col">
-          <h4 class="text-label">Focus Areas</h4>
+          <h4 class="text-label">Divisions</h4>
           <ul>
-            {footerLinks.focus.map((link) => (
+            {footerLinks.divisions.map((link) => (
               <li><a href={link.href} class="footer__link">{link.label}</a></li>
             ))}
           </ul>
