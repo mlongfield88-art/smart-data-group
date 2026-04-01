@@ -115,8 +115,8 @@ svg {
 
 /* Crop Gemini watermark from AI-generated images */
 img[src^="/images/"] {
-  object-position: left top;
-  transform: scale(1.03);
+  object-position: right top;
+  transform: scale(1.05);
 }
 
 a {
