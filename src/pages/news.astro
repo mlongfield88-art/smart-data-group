@@ -9,8 +9,8 @@ const articles = [
     category: 'Open Banking',
     title: 'SDG Welcomes FCA Announcement on Future Entity for UK Open Banking',
     excerpt: 'Smart Data Group welcomes the Financial Conduct Authority\'s latest announcement on the Future Entity for UK open banking, outlining an exciting path forward for a more unified, interoperable, and user-centric open banking ecosystem.',
-    image: 'Financial Conduct Authority building — open banking regulation and policy',
-    color: '#071e4f',
+    src: '/images/fca-building.jpeg',
+    alt: 'Financial Conduct Authority building with data network light trails',
     featured: true,
   },
   {
@@ -18,8 +18,8 @@ const articles = [
     category: 'Legislation',
     title: 'UK Data Reforms Unpacked: The New Smart Data Schemes',
     excerpt: 'A closer look at Part 1 of the Data (Use and Access) Act 2025, which establishes smart data schemes — putting the UK\'s Open Banking regime on a statutory footing and expanding personal data portability to other sectors.',
-    image: 'UK Parliament and legislative documents — Data Use and Access Act 2025',
-    color: '#0d2660',
+    src: '/images/duaa-governance.jpeg',
+    alt: 'Data Use and Access Act 2025 governance framework documents',
     featured: true,
   },
   {
@@ -27,32 +27,32 @@ const articles = [
     category: 'Launch',
     title: 'Smart Data Group Launches at UK Parliament',
     excerpt: 'Policymakers, regulators, industry leaders, and innovators came together at Parliament to celebrate the launch of the Smart Data Group — unlocking an estimated £27.8 billion in economic value.',
-    image: 'Smart Data Group launch event at Westminster — industry leaders and policymakers',
-    color: '#0a1d45',
+    src: '/images/hero-parliament.jpeg',
+    alt: 'UK Parliament at twilight — Smart Data Group launch at Westminster',
   },
   {
     date: 'January 2025',
     category: 'Energy',
     title: 'Energy Smart Data Scheme Proposed in Britain',
     excerpt: 'An energy smart data scheme involving sharing customer data with authorised third parties in a secure way is under investigation, modelled on the UK\'s open banking scheme.',
-    image: 'Energy infrastructure and smart meters — UK energy data sharing',
-    color: '#1a3068',
+    src: '/images/energy-meter.jpeg',
+    alt: 'Smart energy meter displaying £27.8bn economic value with data streams',
   },
   {
     date: 'January 2025',
     category: 'Policy',
     title: 'Government Calls for Evidence on Energy Data Sharing',
     excerpt: 'The Department for Energy Security and Net Zero issued a call for evidence on the development of an energy smart data scheme to understand the potential for data sharing in the sector.',
-    image: 'Government policy documents — energy data sharing framework',
-    color: '#071e4f',
+    src: '/images/duaa-governance.jpeg',
+    alt: 'Government policy documents — energy data sharing framework',
   },
   {
     date: '2025',
     category: 'Strategy',
     title: 'Smart Data 2035: The UK\'s Smart Data Strategy Published',
     excerpt: 'The UK government\'s Smart Data 2035 Strategy sets out next steps to develop a smart data economy — with schemes across finance, energy, telecoms, transport, retail, and property.',
-    image: 'Strategic planning documents — UK Smart Data 2035 vision',
-    color: '#132450',
+    src: '/images/parliament-portal.jpeg',
+    alt: 'Parliament archway — UK Smart Data 2035 vision',
   },
 ];
 
@@ -82,10 +82,12 @@ const regular = articles.filter((a) => !a.featured);
     <div class="featured-grid stagger-reveal">
       {featured.map((article) => (
         <a href="#" class="featured-card">
-          <ImagePlaceholder
-            alt={article.image}
-            aspect="16/10"
-            color={article.color}
+          <img
+            src={article.src}
+            alt={article.alt}
+            class="clip-reveal"
+            style="aspect-ratio: 16/10; width: 100%; object-fit: cover; border-radius: var(--radius-md);"
+            loading="lazy"
           />
           <div class="featured-card__content">
             <div class="featured-card__meta">
@@ -120,10 +122,11 @@ const regular = articles.filter((a) => !a.featured);
               <p class="text-body">{article.excerpt}</p>
             </div>
             <div class="article-row__right">
-              <ImagePlaceholder
-                alt={article.image}
-                aspect="3/2"
-                color={article.color}
+              <img
+                src={article.src}
+                alt={article.alt}
+                style="aspect-ratio: 3/2; width: 100%; object-fit: cover; border-radius: var(--radius-md);"
+                loading="lazy"
               />
             </div>
           </a>

@@ -11,8 +11,8 @@ const upcomingEvents = [
     location: 'London, UK',
     type: 'Conference',
     description: 'Bringing together policymakers, regulators, industry leaders, and innovators to explore the future of smart data schemes across the UK economy.',
-    image: 'Modern conference venue in London — smart data industry event',
-    color: '#071e4f',
+    src: '/images/hero-parliament.jpeg',
+    alt: 'UK Parliament — Smart Data Group conference venue',
   },
   {
     date: '2026',
@@ -20,8 +20,8 @@ const upcomingEvents = [
     location: 'London, UK',
     type: 'Workshop',
     description: 'Working with the FCA to set out the Open Finance roadmap, extending the benefits of Open Banking to mortgages, pensions, investments, and savings.',
-    image: 'Workshop session — collaborative policy discussion',
-    color: '#1a3068',
+    src: '/images/fca-building.jpeg',
+    alt: 'FCA building — Open Finance workshop venue',
   },
   {
     date: '2026',
@@ -29,8 +29,8 @@ const upcomingEvents = [
     location: 'Virtual',
     type: 'Consultation',
     description: 'The government launches a call for evidence to understand the value of a smart data scheme in the transport sector.',
-    image: 'Virtual consultation event — transport data sharing',
-    color: '#0a1d45',
+    src: '/images/duaa-governance.jpeg',
+    alt: 'Policy documents — transport data sharing consultation',
   },
 ];
 
@@ -89,10 +89,12 @@ const pastEvents = [
         {upcomingEvents.map((event) => (
           <div class="event-card">
             <div class="event-card__media">
-              <ImagePlaceholder
-                alt={event.image}
-                aspect="16/10"
-                color={event.color}
+              <img
+                src={event.src}
+                alt={event.alt}
+                class="clip-reveal"
+                style="aspect-ratio: 16/10; width: 100%; object-fit: cover; border-radius: var(--radius-md);"
+                loading="lazy"
               />
             </div>
             <div class="event-card__content">
