@@ -291,14 +291,14 @@ import RevealSection from '@/components/RevealSection';
     object-fit: cover;
     transform: scale(1.06);
     transform-origin: top left;
-    filter: brightness(0.7) saturate(1.3);
+    filter: brightness(0.6) saturate(0.35) hue-rotate(10deg);
   }
 
   .hero__overlay {
     position: absolute;
     inset: 0;
     background:
-      linear-gradient(to top, #051a53 0%, rgba(5, 26, 83, 0.8) 30%, rgba(5, 26, 83, 0.6) 60%, rgba(5, 26, 83, 0.75) 100%);
+      linear-gradient(to top, #051a53 0%, rgba(5, 26, 83, 0.75) 30%, rgba(5, 26, 83, 0.55) 60%, rgba(5, 26, 83, 0.65) 100%);
   }
 
   .hero__inner {
@@ -523,6 +523,7 @@ import RevealSection from '@/components/RevealSection';
     transform: scale(1.06);
     transform-origin: top left;
     transition: transform 0.6s var(--ease-out-expo);
+    filter: brightness(0.45) saturate(0.4) hue-rotate(10deg);
   }
 
   .news-card:hover .news-card__img img {
@@ -575,6 +576,7 @@ import RevealSection from '@/components/RevealSection';
     object-fit: cover;
     transform: scale(1.06);
     transform-origin: top left;
+    filter: brightness(0.45) saturate(0.4) hue-rotate(10deg);
   }
 
   .cta-banner__bg-overlay {

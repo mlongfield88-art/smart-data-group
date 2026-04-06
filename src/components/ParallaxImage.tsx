@@ -55,6 +55,7 @@ export default function ParallaxImage({
           width: '130%',
           height: '130%',
           objectFit: 'cover',
+          filter: 'brightness(0.45) saturate(0.4) hue-rotate(10deg)',
         }}
       />
       {overlay && (

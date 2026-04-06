@@ -121,6 +121,7 @@ svg {
 .img-crop img {
   transform: scale(1.06);
   transform-origin: top left;
+  filter: brightness(0.45) saturate(0.4) hue-rotate(10deg);
 }
 
 /* Full-bleed images — break out of container */
