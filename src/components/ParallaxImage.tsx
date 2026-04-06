@@ -55,7 +55,7 @@ export default function ParallaxImage({
           width: '130%',
           height: '130%',
           objectFit: 'cover',
-          filter: 'brightness(0.6) saturate(0.25)',
+          filter: 'brightness(0.5) saturate(0.15) contrast(0.85)',
         }}
       />
       <div
@@ -64,7 +64,7 @@ export default function ParallaxImage({
           inset: 0,
           background: '#051a53',
           mixBlendMode: 'color',
-          opacity: 0.85,
+          opacity: 1,
           pointerEvents: 'none',
           zIndex: 1,
         }}

@@ -125,7 +125,7 @@ svg {
   inset: 0;
   background: #051a53;
   mix-blend-mode: color;
-  opacity: 0.85;
+  opacity: 1;
   pointer-events: none;
   z-index: 1;
 }
@@ -133,7 +133,7 @@ svg {
 .img-crop img {
   transform: scale(1.06);
   transform-origin: top left;
-  filter: brightness(0.6) saturate(0.25);
+  filter: brightness(0.5) saturate(0.15) contrast(0.85);
 }
 
 /* Full-bleed images — break out of container */
