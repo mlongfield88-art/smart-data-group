@@ -13,8 +13,13 @@ const navLinks = [
 <header class="nav" id="main-nav">
   <div class="nav__inner container">
     <a href="/" class="nav__logo" aria-label="Smart Data Group Home">
-      <span class="nav__logo-mark">SDG</span>
-      <span class="nav__logo-text">Smart Data Group</span>
+      <img
+        src="/images/logo-transparent.png"
+        alt="Smart Data Group"
+        class="nav__logo-img"
+        width="200"
+        height="48"
+      />
     </a>
 
     <nav class="nav__links" aria-label="Main navigation">
@@ -120,20 +125,15 @@ const navLinks = [
     z-index: 10;
   }
 
-  .nav__logo-mark {
-    font-size: 0.8125rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    color: var(--color-obsidian);
-    background: var(--color-alabaster);
-    padding: 0.35em 0.55em;
-    border-radius: var(--radius-sm);
+  .nav__logo-img {
+    height: 44px;
+    width: auto;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
   }
 
-  .nav__logo-text {
-    font-size: 0.875rem;
-    font-weight: 500;
-    letter-spacing: 0.01em;
+  .nav__logo:hover .nav__logo-img {
+    opacity: 0.85;
   }
 
   .nav__links {

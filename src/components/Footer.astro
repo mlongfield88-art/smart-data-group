@@ -26,8 +26,7 @@ const footerLinks = {
     <div class="footer__top">
       <div class="footer__brand">
         <div class="footer__logo">
-          <span class="nav__logo-mark">SDG</span>
-          <span class="footer__logo-text">Smart Data Group</span>
+          <img src="/images/logo-transparent.png" alt="Smart Data Group" class="footer__logo-img" width="180" height="44" />
         </div>
         <p class="footer__tagline text-body-lg">
           Empowering members to design and implement smart data schemes — unlocking innovation, better services, and economic growth across the UK economy.
@@ -93,9 +92,10 @@ const footerLinks = {
     margin-bottom: var(--space-6);
   }
 
-  .footer__logo-text {
-    font-size: 0.875rem;
-    font-weight: 500;
+  .footer__logo-img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
   }
 
   .footer__tagline {
