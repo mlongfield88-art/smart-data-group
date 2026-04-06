@@ -18,6 +18,7 @@ import RevealSection from '@/components/RevealSection';
         alt="UK Parliament and Westminster at twilight"
         loading="eager"
       />
+      <div class="hero__color-tint"></div>
       <div class="hero__overlay"></div>
     </div>
     <div class="container hero__inner">
@@ -291,14 +292,22 @@ import RevealSection from '@/components/RevealSection';
     object-fit: cover;
     transform: scale(1.06);
     transform-origin: top left;
-    filter: brightness(0.6) saturate(0.35) hue-rotate(10deg);
+    filter: brightness(0.65) saturate(0.25);
+  }
+
+  .hero__color-tint {
+    position: absolute;
+    inset: 0;
+    background: #051a53;
+    mix-blend-mode: color;
+    opacity: 0.85;
   }
 
   .hero__overlay {
     position: absolute;
     inset: 0;
     background:
-      linear-gradient(to top, #051a53 0%, rgba(5, 26, 83, 0.75) 30%, rgba(5, 26, 83, 0.55) 60%, rgba(5, 26, 83, 0.65) 100%);
+      linear-gradient(to top, #051a53 0%, rgba(5, 26, 83, 0.7) 30%, rgba(5, 26, 83, 0.45) 60%, rgba(5, 26, 83, 0.55) 100%);
   }
 
   .hero__inner {
@@ -523,7 +532,7 @@ import RevealSection from '@/components/RevealSection';
     transform: scale(1.06);
     transform-origin: top left;
     transition: transform 0.6s var(--ease-out-expo);
-    filter: brightness(0.45) saturate(0.4) hue-rotate(10deg);
+    filter: brightness(0.6) saturate(0.25);
   }
 
   .news-card:hover .news-card__img img {
@@ -531,11 +540,23 @@ import RevealSection from '@/components/RevealSection';
     transform-origin: top left;
   }
 
+  .news-card__img::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #051a53;
+    mix-blend-mode: color;
+    opacity: 0.85;
+    pointer-events: none;
+    z-index: 1;
+  }
+
   .news-card__img-overlay {
     position: absolute;
     inset: 0;
     background: linear-gradient(to top, rgba(5, 26, 83, 0.6) 0%, transparent 50%);
     pointer-events: none;
+    z-index: 2;
   }
 
   .news-card__content {
@@ -576,7 +597,18 @@ import RevealSection from '@/components/RevealSection';
     object-fit: cover;
     transform: scale(1.06);
     transform-origin: top left;
-    filter: brightness(0.45) saturate(0.4) hue-rotate(10deg);
+    filter: brightness(0.6) saturate(0.25);
+  }
+
+  .cta-banner__bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #051a53;
+    mix-blend-mode: color;
+    opacity: 0.85;
+    pointer-events: none;
+    z-index: 1;
   }
 
   .cta-banner__bg-overlay {

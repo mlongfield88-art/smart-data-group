@@ -116,12 +116,24 @@ svg {
 /* Crop Gemini watermark from bottom-right of AI-generated images */
 .img-crop {
   overflow: hidden;
+  position: relative;
+}
+
+.img-crop::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #051a53;
+  mix-blend-mode: color;
+  opacity: 0.85;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .img-crop img {
   transform: scale(1.06);
   transform-origin: top left;
-  filter: brightness(0.45) saturate(0.4) hue-rotate(10deg);
+  filter: brightness(0.6) saturate(0.25);
 }
 
 /* Full-bleed images — break out of container */

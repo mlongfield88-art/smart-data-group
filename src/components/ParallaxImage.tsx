@@ -55,7 +55,18 @@ export default function ParallaxImage({
           width: '130%',
           height: '130%',
           objectFit: 'cover',
-          filter: 'brightness(0.45) saturate(0.4) hue-rotate(10deg)',
+          filter: 'brightness(0.6) saturate(0.25)',
+        }}
+      />
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          background: '#051a53',
+          mixBlendMode: 'color',
+          opacity: 0.85,
+          pointerEvents: 'none',
+          zIndex: 1,
         }}
       />
       {overlay && (
@@ -65,7 +76,7 @@ export default function ParallaxImage({
             inset: 0,
             background: gradients[overlayDirection],
             pointerEvents: 'none',
-            zIndex: 1,
+            zIndex: 2,
           }}
         />
       )}
