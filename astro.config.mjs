@@ -1,6 +1,8 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 
+import tailwindcss from '@tailwindcss/vite';
+
 export default defineConfig({
   integrations: [react()],
   site: 'https://smartdatagroup.org',
@@ -13,5 +15,7 @@ export default defineConfig({
     build: {
       cssMinify: true,
     },
+
+    plugins: [tailwindcss()],
   },
 });
